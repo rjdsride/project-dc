@@ -9,7 +9,7 @@ python manage.py startapp project
 -- UPANDO PRO GITHUB --
 git config --global user.name 'name'
 git config --global user.email 'email
-git config --global init.defaultBranch main
+
 # Configure o .gitignore
 git init
 git add .

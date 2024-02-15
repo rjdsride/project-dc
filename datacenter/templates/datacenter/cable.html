@@ -1,0 +1,16 @@
+{% extends "global/base.html" %}
+
+{% block content %}
+    <div class="single-cable">
+        <h1 class="single-cable-data">
+            {{cable.dev_a}} TO {{cable.dev_b}}
+        </h1>
+        <h2><b>NEP: </b>{{cable.nep}}</h2>
+        <h2><b>Ponta A: </b>{{cable.ponta_a}}</h2>
+        <h2><b>Ponta B: </b>{{cable.ponta_b}}</h2>
+        <h2><b>Group: </b>{{cable.group_dev}}</h2>
+        <h2><b>Description: </b>{{cable.description}}</h2>
+
+
+    </div>
+{% endblock content %}

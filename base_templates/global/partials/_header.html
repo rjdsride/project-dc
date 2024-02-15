@@ -1,0 +1,32 @@
+{% load static %}
+<header class="header">
+    <h1 class="header-heading">
+        <a href="{% url "datacenter:index" %}" class="header-link">
+            Datacenter
+        </a>
+    </h1>
+    <a href="{% url "datacenter:index" %}">
+        <img src="{% static 'global/img/logo-brasil-digital.png' %}" alt="random">
+    </a>
+
+    <nav class="menu">
+        <ul class="menu-list">
+            <li class="menu-item">
+                <a href="" class="menu-link">
+                    LINK
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="" class="menu-link">
+                    LINK
+                </a>
+            </li>
+        </ul>
+    </nav>
+    
+    <div class="search">
+        <form action="{% url "datacenter:search" %}" method="GET">
+            <input type="search" class="search-input" placeholder="Search" id="search" name="q">
+        </form>
+    </div>
+</header>
