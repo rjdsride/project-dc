@@ -34,6 +34,7 @@ class Cable(models.Model):
         Group,
         on_delete=models.SET_NULL,
         blank=True, null=True,
+        verbose_name= 'Group',
     )
     description = models.CharField(max_length=255, blank=True, null=True)
 

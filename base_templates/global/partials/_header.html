@@ -12,8 +12,8 @@
     <nav class="menu">
         <ul class="menu-list">
             <li class="menu-item">
-                <a href="" class="menu-link">
-                    LINK
+                <a href="{% url "datacenter:create" %}" class="menu-link">
+                    Create
                 </a>
             </li>
             <li class="menu-item">
@@ -26,7 +26,7 @@
     
     <div class="search">
         <form action="{% url "datacenter:search" %}" method="GET">
-            <input type="search" class="search-input" placeholder="Search" id="search" name="q">
+            <input type="search" class="search-input" placeholder="Search" id="search" name="q" value= "{{search_value}}">
         </form>
     </div>
 </header>

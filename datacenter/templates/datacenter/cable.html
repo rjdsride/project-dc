@@ -3,7 +3,7 @@
 {% block content %}
     <div class="single-cable">
         <h1 class="single-cable-data">
-            {{cable.dev_a}} TO {{cable.dev_b}}
+            {{cable.dev_a}} -> TO -> {{cable.dev_b}}
         </h1>
         <h2><b>NEP: </b>{{cable.nep}}</h2>
         <h2><b>Ponta A: </b>{{cable.ponta_a}}</h2>
@@ -11,6 +11,19 @@
         <h2><b>Group: </b>{{cable.group_dev}}</h2>
         <h2><b>Description: </b>{{cable.description}}</h2>
 
+        <div class="cable-links">
+            <a class="btn btn-link" href="{% url "datacenter:update" cable.nep%}">Update</a>
 
+            <form action="{% url "datacenter:delete" cable.nep %}" method="POST">
+                {% csrf_token %}
+
+                {% if  confirmation == 'no'%}
+                    <input type="hidden" name="confirmation" value="yes">
+                    <button class ="btn btn-link btn-delete" type="submit">Confirma?</button>
+                {% else %}
+                <button class ="btn btn-link btn-delete" type="submit">Delete</button>
+                {% endif %}
+            </form>
+        </div>
     </div>
 {% endblock content %}
