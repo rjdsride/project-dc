@@ -18,7 +18,7 @@ class CableForm(forms.ModelForm):
                 'placeholder': 'Example : XGI 0/0/0'
             }
         ),
-        help_text='Por Favor não macaquear o programa'
+        help_text='Escolha sabiamente entre : XGI ETH, Gb ETH,TENGb ETH,100Gb ETH,ETH TRUNK'
     )
     class Meta:
         model = Cable

@@ -14,5 +14,4 @@ urlpatterns = [
     path('datacenter/<int:cable_nep>/update/', views.update, name='update'),
     path('datacenter/<int:cable_nep>/delete/', views.delete, name='delete'),
 
-
 ]
